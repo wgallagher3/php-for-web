@@ -9,6 +9,7 @@
     <?php // Script 3.3 handle_form.php
 
     ini_set('display_errors', 1); // Let me learn from my mistakes
+    error_reporting(E_ALL); // Show all possible problems
 
     // This page receives the data from feedback.html
 
