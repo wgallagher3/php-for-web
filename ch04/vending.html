@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vending</title>
+    <style>
+        #number1, #number2 {
+            width: 4em;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Pepsi Machines:</p>
+        <form action="handle_vend.php" method="get">
+
+            <datalist id="default20oz">
+                <option value="1"></option>
+                <option value="2"></option>
+                <option value="3"></option>
+                <option value="4"></option>
+                <option value="5"></option>
+                <option value="6"></option>
+                <option value="7"></option>
+                <option value="8"></option>
+                <option value="9"></option>
+                <option value="10"></option>
+                <option value="11"></option>
+                <option value="12"></option>
+                <option value="13"></option>
+            </datalist>
+
+            <p>Pepsi 
+                <input type="number" id="number1" list="default20oz" name="number1">
+                <input type="number" id="number2" list="default20oz" name="number2">
+            </p>
+        </form>
+
+    </div>
+</body>
+</html>
