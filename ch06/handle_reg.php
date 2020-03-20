@@ -57,10 +57,44 @@
         $okay = false;
     }
 
+    // Validate the color:
+    // if ($_POST['color'] == 'red') {
+    //     $color_type = 'primary';
+    // } elseif ($_POST['color'] == 'yellow') {
+    //     $color_type = 'primary';
+    // } elseif ($_POST['color'] == 'green') {
+    //     $color_type = 'secondary';
+    // } elseif ($_POST['color'] == 'blue') {
+    //     $color_type = 'primary';
+    // } else {
+    //     print '<p class="error">Please select your favorite color.</p>';
+    //     $okay = false;
+    // }
+
+    switch ($_POST['color']) {
+        case 'red':
+            $color_type = 'primary';
+            break;
+        case 'yellow':
+            $color_type = 'primary';
+            break;
+        case 'green':
+            $color_type = 'secondary';
+            break;
+        case 'blue':
+            $color_type = 'primary';
+            break;
+        default:
+            print '<p class="error">Please select your favorite color.</p>';
+            $okay = false;
+            break;
+    } // End of switch.
+
     // If there were no errors, print a success message:
     if ($okay) {
         print '<p>You have been successfully registered (but not really).</p>';
         print "<p>You will turn $age this year.</p>";
+        print "<p>Your favorite color is a $color_type color.</p>";
     }
 
 
