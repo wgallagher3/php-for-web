@@ -93,11 +93,11 @@
 
     // If there were no errors, print a success message:
     if ($okay) {
+        $color = $_POST['color'];
         print '<p>You have been successfully registered (but not really).</p>';
         print "<p>You will turn $age this year.</p>";
-        print "<p>Your favorite color is a $color_type color.</p>";
+        print "<p>Your favorite color is a <span style=\"color:$color\">$color_type</span> color.</p>";
     }
-
 
     ?>
 </body>
