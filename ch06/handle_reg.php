@@ -19,6 +19,11 @@
     // Flag variable to track success:
     $okay = true;
 
+    // Print all post variables:
+    print"<pre>";
+    print_r ($_POST);
+    print"</pre>";
+
     // Validate the email address:
     if (empty($_POST['email'])) {
         print '<p class="error">Please enter your email address.</p>';
