@@ -38,10 +38,11 @@
     }
 
     // Validate the birth year:
+    $current_year = date("Y");
     if (is_numeric($_POST['year']) AND (strlen($_POST['year']) == 4)){
         // Check they were born before this year:
-        if ($_POST['year'] < 2020) {
-            $age = 2020 - $_POST['year']; //Calculate age this year
+        if ($_POST['year'] < $current_year) {
+            $age = $current_year - $_POST['year']; //Calculate age this year
          }else {
             print '<p class="error">Either you entered your birth wrong or you come from the future!</p>';
             $okay = false;
